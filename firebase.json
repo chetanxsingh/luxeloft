@@ -1,0 +1,36 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "luxeloft-faac0",
+          "appId": "1:607634145745:android:432c6975d5c1f8fe40a0f0",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "luxeloft-faac0",
+          "appId": "1:607634145745:ios:6dd23fb6ef9e452940a0f0",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "luxeloft-faac0",
+          "configurations": {
+            "android": "1:607634145745:android:432c6975d5c1f8fe40a0f0",
+            "ios": "1:607634145745:ios:6dd23fb6ef9e452940a0f0"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "database": "(default)",
+    "location": "asia-south1",
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}

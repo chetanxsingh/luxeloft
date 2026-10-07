@@ -1,0 +1,33 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Users can only access their own profile
+    match /users/{userId} {
+      allow read, write: if request.auth != null
+                         && request.auth.uid == userId;
+    }
+
+    // Home content
+    match /banners/{document=**} {
+      allow read: if true;
+    }
+
+    match /tabs/{document=**} {
+      allow read: if true;
+    }
+
+    match /categories/{document=**} {
+      allow read: if true;
+    }
+
+    match /products/{document=**} {
+      allow read: if true;
+    }
+
+    match /app_config/{document=**} {
+      allow read: if true;
+    }
+  }
+}
